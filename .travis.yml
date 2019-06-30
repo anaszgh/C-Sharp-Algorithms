@@ -7,6 +7,8 @@ install:
   # - nuget install xunit.runners -Version 2.0.0 -OutputDirectory testrunner
   # - nuget install xunit.runner.console -Version 2.4.1 -OutputDirectory testrunner
 script:
-  - dotnet msbuild /p:Configuration=Release C-Sharp-Algorithms.sln
+  - dotnet test UnitTests/UnitTest.csproj
+  - dotnet build /p:Configuration=Release C-Sharp-Algorithms.sln
+
   # - dotnet restore
   # - dotnet test UnitTest/UnitTest.csproj
